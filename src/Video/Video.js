@@ -23,7 +23,7 @@ import './Video.css';
         className='video_player'
         loop
         ref={videoRef}
-        src='https://v16-webapp.tiktok.com/e73225cf437a0f05e3d712ea7e6d0213/622fc803/video/tos/useast2a/tos-useast2a-pve-0037c001-aiso/3b6b7157f94f4eebb99e8a2a1e072a5e/?a=1988&br=2894&bt=1447&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-3tpnz7Th56svDXq&l=2022031416554901024524804726479E30&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=MzlyOjs6Zng5OzMzZjczM0ApNzUzPDg4Njw8NzM1Z2ZpNmczLm9ucjRncmpgLS1kMWNzc2JeXjZjYWFiNTYxLWBiMjI6Yw%3D%3D&vl=&vr='>
+        src='https://v16-webapp.tiktok.com/795c6a7734572f04c41a8ab3f9a34dd3/6230a3be/video/tos/useast2a/tos-useast2a-pve-0037c001-aiso/243ba03e9ead41c9817f92460fdb08ba/?a=1988&br=3142&bt=1571&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-3tpnz7Th~aQiDXq&l=2022031508332101024500206906213B71&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M2g0azM6Zjo1OzMzZjczM0ApNWg1NTgzaWU6Nzw6ZGU2N2dlLmBwcjRnMl5gLS1kMWNzc2FgYi81MGMzMjExM14wYi06Yw%3D%3D&vl=&vr='>
         </video>
 
         {/*video footer */}
