@@ -2,9 +2,25 @@
 import './App.css';
 import {BrowserRouter} from 'react-router-dom'
 import Video from './Video/Video';
-import VideoFooter from './VideoFooter/VideoFooter';
-import VideoSideBar from './VideoSideBar/VideoSideBar';
+// import VideoFooter from './VideoFooter/VideoFooter';
+// import VideoSideBar from './VideoSideBar/VideoSideBar';
+import { useEffect, useState } from 'react';
+import axios from './axios.js';
 function App() {
+  const [video, setVideo]=useState([]);
+  useEffect(() => {
+    return () => {
+      async function fetchPost(){
+        const response=await axios.get('/v2/posts');
+        setVideo(response.data);
+        
+        return response;
+      }
+      fetchPost();
+    };
+  }, [])
+  console.log(video);
+
   return (
     <div className="App">
       
@@ -13,14 +29,17 @@ function App() {
         <BrowserRouter>
         
         <div className='app_videos'>
-            <Video url={'https://v16-webapp.tiktok.com/95b2f26279f7949105331bf6bbf01791/62310b82/video/tos/useast2a/tos-useast2a-pve-0037c001-aiso/8d68c09c12be45d3951d8eac865940ff/?a=1988&br=7514&bt=3757&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-3tpnz7Tho8NiDXq&l=2022031515560501024510011721629A89&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3N4cGg6ZnUzOzMzZjczM0ApNzs8ZDk3aGUzNzQ3ZDxpOWdybDBgcjQwYGxgLS1kMWNzc14vMF5jXzJfNjJeYS8yMmA6Yw%3D%3D&vl=&vr='}
-              channel="dawa sherpa"
-              description="yo yo honey singh"
-              song="99 problem but reat aint one"
-              likes={0}
-              messages={1}
-              share={0}
-            />
+            {video.map(({url, channel,description, song, likes, messages, share})=>(
+              <Video
+                  url={url}
+                  channel={channel}
+                  song={song}
+                  likes={likes}
+                  messages={messages}
+                  description={description}
+                  share={share}
+              />
+            ))}
                   
           </div>
           
